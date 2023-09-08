@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students</title>
+</head>
+<body>
+  <h1>Students</h1>
+  <ul>
+    <% students.forEach(function(student) { %>
+      <li><%= student.name %> - <%= student.email %> <a href="/students/edit/<%= student._id %>">Edit</a> <a href="/students/delete/<%= student._id %>">Delete</a></li>
+    <% }); %>
+  </ul>
+  <a href="/students/add">Add Student</a>
+  <a href="/logout">Logout</a>
+</body>
+</html>
